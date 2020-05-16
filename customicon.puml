@@ -1,0 +1,35 @@
+@startuml
+
+!include keypair.puml
+!include demo.puml
+sprite $kp1 keypair.png
+
+sprite $bp [16x16/16] {
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFF0FFFFF
+FFFFFFFFFF00FFFF
+FF00000000000FFF
+FF000000000000FF
+FF00000000000FFF
+FFFFFFFFFF00FFFF
+FFFFFFFFFF0FFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+FFFFFFFFFFFFFFFF
+}
+skinparam sequence {
+  xParticipantFontSize 10
+}
+
+skinparam defaultFontSize 16
+
+Alice -> Bob: keypair2 <$keypair2{scale=0.05}>
+Alice -> Bob: keypair3  <$keypair3>
+Alice -> Bob: demo  <$demo{scale=0.1}>
+Bob -> Bob: haha <$kp1{scale=0.7}>
+@enduml

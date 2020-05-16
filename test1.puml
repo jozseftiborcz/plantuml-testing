@@ -1,0 +1,7 @@
+@startuml
+alt VALID
+Alice -> Bob: test
+else INVALID
+Blabla -> Bob: haha
+end
+@enduml
